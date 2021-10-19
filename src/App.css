@@ -2,6 +2,20 @@
 
 }
 
+.bg-grey {
+  background-color: rgb(224, 224, 224);
+}
+
+.bg-orange {
+  background-color: rgb(245, 145, 63);
+}
+
+.border-right {
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+  border-right: 1px solid;
+}
 
 @media (prefers-reduced-motion: no-preference) {
 
