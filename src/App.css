@@ -1,7 +1,3 @@
-.App {
-
-}
-
 .bg-grey {
   background-color: rgb(224, 224, 224);
 }
@@ -15,12 +11,4 @@
   border-bottom: none;
   border-left: none;
   border-right: 1px solid;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-
-}
-
-.App-header {
-
 }
