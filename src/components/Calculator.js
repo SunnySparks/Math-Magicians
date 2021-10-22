@@ -2,43 +2,63 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import '../App.css';
 import React from 'react';
+import calculate from '../logic/calculate';
 
 // eslint-disable-next-line react/prefer-stateless-function
 export default class Calculator extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      total: 0,
+      next: 0,
+      operation: '',
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick = (e) => {
+    this.setState((state) => calculate(state, e));
+  }
+
   render() {
+    const { total, next, operation } = this.state;
     return (
       <div className="container">
         <div className="row">
-          <div className="col-lg-12 text-end bg-secondary text-white pb-5 pt-5">0</div>
+          <div className="col-lg-12 text-end bg-secondary text-white pb-5 pt-5">
+            {total}
+            {operation}
+            {next}
+          </div>
         </div>
         <div className="row border-bottom border-secondary">
-          <div className="col-md-3 border-right border-secondary text-center bg-grey pb-5 pt-5">AC</div>
-          <div className="col-md-3 border-right border-secondary text-center bg-grey pb-5 pt-5">+/-</div>
-          <div className="col-md-3 border-right border-secondary text-center bg-grey pb-5 pt-5">%</div>
-          <div className="col-md-3 border-right border-secondary text-center bg-orange pb-5 pt-5">÷</div>
+          <button className="col-md-3 border-right border-secondary text-center bg-grey pb-5 pt-5" type="button" name="AC" onClick={() => { this.handleClick('AC'); }}>AC</button>
+          <button className="col-md-3 border-right border-secondary text-center bg-grey pb-5 pt-5" type="button" name="+/-" onClick={() => { this.handleClick('+/-'); }}>+/-</button>
+          <button className="col-md-3 border-right border-secondary text-center bg-grey pb-5 pt-5" type="button" name="%" onClick={() => { this.handleClick('%'); }}>%</button>
+          <button className="col-md-3 border-right border-secondary text-center bg-orange pb-5 pt-5" type="button" name="÷" onClick={() => { this.handleClick('÷'); }}>÷</button>
         </div>
         <div className="row border-bottom border-secondary">
-          <div className="col-md-3 border-right border-secondary text-center bg-grey pb-5 pt-5">7</div>
-          <div className="col-md-3 border-right border-secondary text-center bg-grey pb-5 pt-5">8</div>
-          <div className="col-md-3 border-right border-secondary text-center bg-grey pb-5 pt-5">9</div>
-          <div className="col-md-3 border-right border-secondary text-center bg-orange pb-5 pt-5">x</div>
+          <button className="col-md-3 border-right border-secondary text-center bg-grey pb-5 pt-5" type="button" name="7" onClick={() => { this.handleClick('7'); }}>7</button>
+          <button className="col-md-3 border-right border-secondary text-center bg-grey pb-5 pt-5" type="button" name="8" onClick={() => { this.handleClick('8'); }}>8</button>
+          <button className="col-md-3 border-right border-secondary text-center bg-grey pb-5 pt-5" type="button" name="9" onClick={() => { this.handleClick('9'); }}>9</button>
+          <button className="col-md-3 border-right border-secondary text-center bg-orange pb-5 pt-5" type="button" name="x" onClick={() => { this.handleClick('x'); }}>x</button>
         </div>
         <div className="row border-bottom border-secondary">
-          <div className="col-md-3 border-right border-secondary text-center bg-grey pb-5 pt-5">4</div>
-          <div className="col-md-3 border-right border-secondary text-center bg-grey pb-5 pt-5">5</div>
-          <div className="col-md-3 border-right border-secondary text-center bg-grey pb-5 pt-5">6</div>
-          <div className="col-md-3 border-right border-secondary text-center bg-orange pb-5 pt-5">-</div>
+          <button className="col-md-3 border-right border-secondary text-center bg-grey pb-5 pt-5" type="button" name="4" onClick={() => { this.handleClick('4'); }}>4</button>
+          <button className="col-md-3 border-right border-secondary text-center bg-grey pb-5 pt-5" type="button" name="5" onClick={() => { this.handleClick('5'); }}>5</button>
+          <button className="col-md-3 border-right border-secondary text-center bg-grey pb-5 pt-5" type="button" name="6" onClick={() => { this.handleClick('6'); }}>6</button>
+          <button className="col-md-3 border-right border-secondary text-center bg-orange pb-5 pt-5" type="button" name="-" onClick={() => { this.handleClick('-'); }}>-</button>
         </div>
         <div className="row border-bottom border-secondary">
-          <div className="col-md-3 border-right border-secondary text-center bg-grey pb-5 pt-5">1</div>
-          <div className="col-md-3 border-right border-secondary text-center bg-grey pb-5 pt-5">2</div>
-          <div className="col-md-3 border-right border-secondary text-center bg-grey pb-5 pt-5">3</div>
-          <div className="col-md-3 border-right border-secondary text-center bg-orange pb-5 pt-5">+</div>
+          <button className="col-md-3 border-right border-secondary text-center bg-grey pb-5 pt-5" type="button" name="1" onClick={() => { this.handleClick('1'); }}>1</button>
+          <button className="col-md-3 border-right border-secondary text-center bg-grey pb-5 pt-5" type="button" name="2" onClick={() => { this.handleClick('2'); }}>2</button>
+          <button className="col-md-3 border-right border-secondary text-center bg-grey pb-5 pt-5" type="button" name="3" onClick={() => { this.handleClick('3'); }}>3</button>
+          <button className="col-md-3 border-right border-secondary text-center bg-orange pb-5 pt-5" type="button" name="+" onClick={() => { this.handleClick('+'); }}>+</button>
         </div>
         <div className="row">
-          <div className="col-md-6 border-right border-secondary text-center bg-grey pb-5 pt-5">0</div>
-          <div className="col-md-3 border-right border-secondary text-center bg-grey pb-5 pt-5">.</div>
-          <div className="col-md-3 border-right border-secondary text-center bg-orange pb-5 pt-5">=</div>
+          <button className="col-md-6 border-right border-secondary text-center bg-grey pb-5 pt-5" type="button" name="0" onClick={() => { this.handleClick('0'); }}>0</button>
+          <button className="col-md-3 border-right border-secondary text-center bg-grey pb-5 pt-5" type="button" name="." onClick={() => { this.handleClick('.'); }}>.</button>
+          <button className="col-md-3 border-right border-secondary text-center bg-orange pb-5 pt-5" type="button" name="=" onClick={() => { this.handleClick('='); }}>=</button>
         </div>
       </div>
     );
