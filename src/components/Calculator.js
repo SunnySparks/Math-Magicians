@@ -8,6 +8,11 @@ import calculate from '../logic/calculate';
 export default class Calculator extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      total: 0,
+      next: 0,
+      operation: '',
+    };
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -16,10 +21,15 @@ export default class Calculator extends React.Component {
   }
 
   render() {
+    const { total, next, operation } = this.state;
     return (
       <div className="container">
         <div className="row">
-          <div className="col-lg-12 text-end bg-secondary text-white pb-5 pt-5">0</div>
+          <div className="col-lg-12 text-end bg-secondary text-white pb-5 pt-5">
+            {total}
+            {operation}
+            {next}
+          </div>
         </div>
         <div className="row border-bottom border-secondary">
           <button className="col-md-3 border-right border-secondary text-center bg-grey pb-5 pt-5" type="button" name="AC" onClick={() => { this.handleClick('AC'); }}>AC</button>
