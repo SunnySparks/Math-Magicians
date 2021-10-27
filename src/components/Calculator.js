@@ -6,24 +6,23 @@ import calculate from '../logic/calculate';
 
 // eslint-disable-next-line react/prefer-stateless-function
 const Calculator = () => {
-  const [data, setData] = useState(
-    {
-      total: 0,
-      next: 0,
-      operation: '',
-    },
-  );
-
-  const handleClick = (e) => {
-    const res = calculate(data, e);
-    setData(res);
+  const initialState = {
+    total: 0,
+    next: 0,
+    operation: '',
   };
-
+  const [state, setState] = useState(initialState);
+  const handleClick = (value) => {
+    setState((state) => calculate(state, value));
+  };
+  const { total, next, operation } = state;
   return (
     <div className="container">
       <div className="row">
         <div className="col-lg-12 text-end bg-secondary text-white pb-5 pt-5">
-          {data}
+          {total}
+          {operation}
+          {next}
         </div>
       </div>
       <div className="row border-bottom border-secondary">
