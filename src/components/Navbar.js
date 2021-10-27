@@ -22,21 +22,27 @@ const Navbar = () => {
     },
   ];
   return (
-    <nav className="navBar">
-      <ul>
-        <li>
-          <h1>
-            Math Magicians
-          </h1>
-        </li>
-        {links.map((link) => (
-          <li className="nav-item " key={link.id}>
-            <h4 className="nav-link">
-              <NavLink to={link.path} activeClassName="active-link" exact>{link.text}</NavLink>
-            </h4>
-          </li>
-        ))}
-      </ul>
+    <nav className="navBar navbar-expand-lg p-4">
+      <div className="container-fluid">
+        <ul className="row">
+          <div className="col-md-7 float-left">
+            <li>
+              <h1>
+                Math Magicians
+              </h1>
+            </li>
+          </div>
+          <div className="float-right row col-md-5">
+            {links.map((link) => (
+              <li className="col" key={link.id}>
+                <h4 className="nav-link">
+                  <NavLink to={link.path} activeClassName="active-link" exact>{link.text}</NavLink>
+                </h4>
+              </li>
+            ))}
+          </div>
+        </ul>
+      </div>
     </nav>
   );
 };
