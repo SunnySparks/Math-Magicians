@@ -19,12 +19,12 @@ const Calculator = () => {
   return (
     <nav className="container pt-5">
       <div className="row">
-        <div className="col-md-4">
+        <div className="col-md-4 title-cont">
           <h1>Let&apos;s do some math!</h1>
         </div>
-        <div className="col-md-8">
+        <div className="col-md-8 calculatrice">
           <div className="row">
-            <div className="col-lg-12 text-end bg-secondary text-white pb-5 pt-5">
+            <div className="col-lg-12 text-end bg-white text-black pb-5 pt-5 border-secondary border-right">
               {total}
               {operation}
               {next}

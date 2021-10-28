@@ -5,7 +5,14 @@ import React from 'react';
 
 const Quote = () => (
   <div className="jumbotron">
-    <nav className="container vertical-center pt-5">
+    <div className="container">
+      <div className="title-cont pt-5 pl-5">
+        <h1>
+          Quote of the day
+        </h1>
+      </div>
+    </div>
+    <nav className="container vertical-center column pt-5">
       <div className="p-5 text-cont">
         <h4>
           Mathematics as an expression of the human mind

@@ -5,7 +5,7 @@ import React from 'react';
 
 const Home = () => (
   <nav className="container pt-5">
-    <div>
+    <div className="title-cont">
       <h1>
         Welcome to our page
       </h1>

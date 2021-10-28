@@ -26,7 +26,7 @@ const Navbar = () => {
       <div className="container-fluid">
         <ul className="row">
           <div className="col-md-7 float-left">
-            <li>
+            <li className="title-top">
               <h1>
                 Math Magicians
               </h1>
@@ -34,7 +34,7 @@ const Navbar = () => {
           </div>
           <div className="float-right row col-md-5">
             {links.map((link) => (
-              <li className="col link-top" key={link.id}>
+              <li className="col link-top text-center" key={link.id}>
                 <h4 className="nav-link">
                   <NavLink to={link.path} activeClassName="active-link" exact>{link.text}</NavLink>
                 </h4>
