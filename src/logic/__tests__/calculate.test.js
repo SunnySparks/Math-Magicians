@@ -36,21 +36,19 @@ describe('Testing all calculate possible operations', () => {
       default:
         break;
     }
-    if (randomOperation === 'x') {
-      randomOperation = '*'; // Shitch to actual multiplication for eval
-    }
 
     const secondNum = calculate(state, rand2);
     expect(secondNum.next).toBe(rand2);
     state = secondNum;
     state = calculate(state, '=');
 
-    if (secondNum.next === 0 && randomOperation === '/') {
+    if ((secondNum.next === '0' || secondNum.next === '-0') && randomOperation === '/') {
       expect(state.total).toBe("Can't divide by 0.");
       expect(state.next).not.toBe(0);
-      expect(state.next).not.toBe(Infinity);
+      expect(Math.abs(state.next)).not.toBe(Infinity);
     } else {
-      expect(state.total).toBe(`${eval(`${firstNum.next} ${randomOperation} ${secondNum.next}`)}`);
+      const total = `${parseFloat(state.total)}`;
+      expect(total).toBe(`${eval(`${firstNum.next} ${randomOperation} ${secondNum.next}`)}`);
     }
   });
 });
