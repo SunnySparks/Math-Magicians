@@ -1,7 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:900i&display=swap');
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 60px;
 }
 
 .bg-grey {
@@ -9,7 +20,12 @@
 }
 
 .bg-orange {
-  background-color: rgb(245, 145, 63);
+  background-color: rgb(21, 140, 186);
+}
+
+.bgCont {
+  background-image: url('./math.png');
+  height: 100vh;
 }
 
 .border-right {
@@ -17,4 +33,62 @@
   border-bottom: none;
   border-left: none;
   border-right: 1px solid;
+}
+
+.title-top {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: white;
+  text-shadow:
+    8px 8px black,
+    20px 20px white;
+}
+
+.title-cont {
+  color: white;
+}
+
+.navBar li {
+  color: white;
+  text-decoration: none;
+}
+
+.navBar li a {
+  color: white;
+  text-decoration: none;
+}
+
+.link-top {
+  color: white;
+  text-decoration: none;
+}
+
+.link-top:hover {
+  border: solid 5px;
+  border-image: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(192, 44, 105, 1) 25%, rgba(253, 29, 29, 1) 50%, rgba(252, 147, 61, 1) 90%, rgba(252, 176, 69, 1) 100%) 1;
+  border-radius: 50%;
+}
+
+ul {
+  list-style: none;
+}
+
+.vertical-center {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+.text-cont {
+  color: white;
+  background-color: rgb(21, 140, 186);
+  box-shadow: 50px 50px 0 0 rgba(255, 255, 255, 0.75);
+  -webkit-box-shadow: 50px 50px 0 0 rgba(255, 255, 255, 0.75);
+  -moz-box-shadow: 50px 50px 0 0 rgba(255, 255, 255, 0.75);
+}
+
+.calculatrice {
+  box-shadow: 50px 50px 0 0 rgba(255, 255, 255, 0.75);
+  -webkit-box-shadow: 50px 50px 0 0 rgba(255, 255, 255, 0.75);
+  -moz-box-shadow: 50px 50px 0 0 rgba(255, 255, 255, 0.75);
 }
