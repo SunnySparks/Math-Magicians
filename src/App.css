@@ -35,16 +35,16 @@ h1 {
   border-right: 1px solid;
 }
 
-.title-top{
+.title-top {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: white;
-  text-shadow: 
-						8px 8px black,
-						20px 20px white;
+  text-shadow:
+    8px 8px black,
+    20px 20px white;
 }
 
-.title-cont{
+.title-cont {
   color: white;
 }
 
@@ -63,10 +63,9 @@ h1 {
   text-decoration: none;
 }
 
-
-.link-top:hover{
+.link-top:hover {
   border: solid 5px;
-  border-image: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(192,44,105,1) 25%, rgba(253,29,29,1) 50%, rgba(252,147,61,1) 90%, rgba(252,176,69,1) 100%) 1;
+  border-image: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(192, 44, 105, 1) 25%, rgba(253, 29, 29, 1) 50%, rgba(252, 147, 61, 1) 90%, rgba(252, 176, 69, 1) 100%) 1;
   border-radius: 50%;
 }
 
@@ -81,15 +80,15 @@ ul {
 }
 
 .text-cont {
-  color:white;
+  color: white;
   background-color: rgb(21, 140, 186);
-  box-shadow: 50px 50px 0px 0px rgba(255, 255, 255,0.75);
--webkit-box-shadow: 50px 50px 0px 0px rgba(255, 255, 255,0.75);
--moz-box-shadow: 50px 50px 0px 0px rgba(255, 255, 255,0.75);
+  box-shadow: 50px 50px 0 0 rgba(255, 255, 255, 0.75);
+  -webkit-box-shadow: 50px 50px 0 0 rgba(255, 255, 255, 0.75);
+  -moz-box-shadow: 50px 50px 0 0 rgba(255, 255, 255, 0.75);
 }
 
 .calculatrice {
-  box-shadow: 50px 50px 0px 0px rgba(255, 255, 255,0.75);
--webkit-box-shadow: 50px 50px 0px 0px rgba(255, 255, 255,0.75);
--moz-box-shadow: 50px 50px 0px 0px rgba(255, 255, 255,0.75);
+  box-shadow: 50px 50px 0 0 rgba(255, 255, 255, 0.75);
+  -webkit-box-shadow: 50px 50px 0 0 rgba(255, 255, 255, 0.75);
+  -moz-box-shadow: 50px 50px 0 0 rgba(255, 255, 255, 0.75);
 }
