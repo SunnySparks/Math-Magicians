@@ -26,7 +26,7 @@ it('will crash if there is a division by 0', () => {
   const by = '÷';
   const crash = operate(a, b, by);
   if (a === 0) {
-    expect(crash).toBe('can\'t divide by zero');
+    expect(crash).toBe("Can't divide by 0.");
   } else {
     const division = parseFloat(operate(a, b, by));
     expect(division).toBe(parseFloat(a / b));
