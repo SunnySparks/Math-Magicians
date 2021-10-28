@@ -10,7 +10,7 @@ import Quote from './components/Quote';
 class App extends React.Component {
   render() {
     return (
-      <div>
+      <div className="bgCont">
         <Router>
           <Navbar />
           <Switch>

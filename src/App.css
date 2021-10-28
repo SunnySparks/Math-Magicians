@@ -12,6 +12,11 @@
   background-color: rgb(245, 145, 63);
 }
 
+.bgCont {
+  background-image: url('./math.png');
+  height: 100vh;
+}
+
 .border-right {
   border-top: none;
   border-bottom: none;
