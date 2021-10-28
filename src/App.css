@@ -45,6 +45,10 @@ body {
   text-decoration: none;
 }
 
+.container {
+  height: 100vh;
+}
+
 .link-top:hover{
   border: solid 5px;
   border-image: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(192,44,105,1) 25%, rgba(253,29,29,1) 50%, rgba(252,147,61,1) 90%, rgba(252,176,69,1) 100%) 1;
@@ -53,4 +57,17 @@ body {
 
 ul {
   list-style: none;
+}
+
+.vertical-center {
+  display: flex;
+  align-items: center;
+}
+
+.text-cont {
+  color:white;
+  background-color: rgb(21, 140, 186);
+  box-shadow: 50px 50px 0px 0px rgba(255, 255, 255,0.75);
+-webkit-box-shadow: 50px 50px 0px 0px rgba(255, 255, 255,0.75);
+-moz-box-shadow: 50px 50px 0px 0px rgba(255, 255, 255,0.75);
 }
