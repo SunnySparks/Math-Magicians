@@ -10,3 +10,8 @@ it('renders correctly', () => {
     .toJSON();
   expect(tree).toMatchSnapshot();
 });
+
+it('Test for Home header', () => {
+  render(<Home />);
+  expect(screen.getByText('Welcome to our page')).toBeInTheDocument();
+});
