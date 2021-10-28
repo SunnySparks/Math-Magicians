@@ -5,8 +5,10 @@ import calculate from './calculate';
 
 describe('Testing all calculate possible operations', () => {
   const operations = ['+', '-', 'x', '÷'];
-  const rand1 = `${Math.floor(Math.random() * 10)}`;
-  const rand2 = `${Math.floor(Math.random() * 10)}`;
+  const plusOrMinus = () => (Math.round(Math.random()) * 2 - 1);
+  const rand1 = `${Math.floor(Math.random() * 10) * plusOrMinus()}`;
+  const rand2 = `${Math.floor(Math.random() * 10) * plusOrMinus()}`;
+
   let randomOperation = operations[Math.floor(Math.random() * operations.length)];
 
   it(`Test with random numbers and random operations, Num1: ${rand1}, Num2: ${rand2}, Operation: ${randomOperation}`, () => {
@@ -45,6 +47,8 @@ describe('Testing all calculate possible operations', () => {
 
     if (secondNum.next === 0 && randomOperation === '/') {
       expect(state.total).toBe("Can't divide by 0.");
+      expect(state.next).not.toBe(0);
+      expect(state.next).not.toBe(Infinity);
     } else {
       expect(state.total).toBe(`${eval(`${firstNum.next} ${randomOperation} ${secondNum.next}`)}`);
     }
