@@ -4,7 +4,7 @@
 
 > A Calculator application created in React, for all the math lovers
 
-![screenshot](./calculator.png)
+![screenshot](./img.png)
 
 Use this app for your math operations
 
