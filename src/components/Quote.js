@@ -4,7 +4,7 @@ import '../App.css';
 import React from 'react';
 
 const Quote = () => (
-  <nav className="container">
+  <nav className="container pt-5">
     <div>
       <h4>
         Mathematics as an expression of the human mind

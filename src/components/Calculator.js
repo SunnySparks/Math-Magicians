@@ -17,7 +17,7 @@ const Calculator = () => {
   };
   const { total, next, operation } = state;
   return (
-    <nav className="container">
+    <nav className="container pt-5">
       <div className="row">
         <div className="col-md-4">
           <h1>Let&apos;s do some math!</h1>

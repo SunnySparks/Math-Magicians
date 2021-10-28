@@ -3,6 +3,9 @@
 *::after {
   box-sizing: border-box;
 }
+body {
+  background-color: black;
+}
 
 .bg-grey {
   background-color: rgb(224, 224, 224);
@@ -22,6 +25,30 @@
   border-bottom: none;
   border-left: none;
   border-right: 1px solid;
+}
+
+.navBar {
+}
+
+.navBar li {
+  color: white;
+  text-decoration: none;
+}
+
+.navBar li a {
+  color: white;
+  text-decoration: none;
+}
+
+.link-top {
+  color: white;
+  text-decoration: none;
+}
+
+.link-top:hover{
+  border: solid 5px;
+  border-image: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(192,44,105,1) 25%, rgba(253,29,29,1) 50%, rgba(252,147,61,1) 90%, rgba(252,176,69,1) 100%) 1;
+  border-radius: 50%;
 }
 
 ul {

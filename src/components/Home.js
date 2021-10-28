@@ -4,7 +4,7 @@ import '../App.css';
 import React from 'react';
 
 const Home = () => (
-  <nav className="container">
+  <nav className="container pt-5">
     <div>
       <h1>
         Welcome to our page

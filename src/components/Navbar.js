@@ -34,7 +34,7 @@ const Navbar = () => {
           </div>
           <div className="float-right row col-md-5">
             {links.map((link) => (
-              <li className="col" key={link.id}>
+              <li className="col link-top" key={link.id}>
                 <h4 className="nav-link">
                   <NavLink to={link.path} activeClassName="active-link" exact>{link.text}</NavLink>
                 </h4>
