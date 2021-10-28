@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom';
 import renderer from 'react-test-renderer';
 import { render, fireEvent, screen } from '@testing-library/react';
-import Calculator from './Calculator';
+import Calculator from '../Calculator';
 
 it('renders correctly', () => {
   const tree = renderer

@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom';
 import renderer from 'react-test-renderer';
 import { render, screen } from '@testing-library/react';
-import Home from './Home';
+import Home from '../Home';
 
 it('renders correctly', () => {
   const tree = renderer
