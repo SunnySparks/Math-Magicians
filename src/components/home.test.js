@@ -14,3 +14,8 @@ it('Test for Home header', () => {
   render(<Home />);
   expect(screen.getByText('Welcome to our page')).toBeInTheDocument();
 });
+
+it('Test Home from Snapshot', () => {
+  const home = renderer.create(<Home />).toJSON();
+  expect(home).toMatchSnapshot();
+});
