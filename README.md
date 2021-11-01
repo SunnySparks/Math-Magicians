@@ -10,7 +10,8 @@ Use this app for your math operations
 
 ## Live versions
 
-[Heroku Live version](https://math-magicians-neon.herokuapp.com)
+- [Heroku Live version](https://math-magicians-neon.herokuapp.com)
+- [Netlify Live version](https://admiring-lumiere-fc068e.netlify.app/calculator)
 
 ## Built With
 
